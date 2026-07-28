@@ -114,6 +114,15 @@
     font-size: 12.5px; font-weight: 700; color: var(--accent); text-decoration: none;
   }
   .applink:hover { text-decoration: underline; }
+  .projects.single { grid-template-columns: 1fr; }
+  .worklist { list-style: none; margin-top: 14px; }
+  .worklist li {
+    font-size: 13.5px; color: var(--muted); padding: 8px 0 8px 18px;
+    border-top: 1px solid var(--border); position: relative;
+  }
+  .worklist li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); }
+  .worklist b { color: var(--text); }
+  .worklist em { color: var(--amber); font-style: normal; font-weight: 700; }
   .tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
   .tag {
     font-size: 11px; font-weight: 600; color: var(--muted);
@@ -183,43 +192,22 @@
         <span class="dates">Apr 2025 – Present</span>
       </div>
       <div class="org-sub">Fintech · MSME lending · Leading a cross-functional team of 6 (web, mobile, backend)</div>
-      <div class="projects">
+      <div class="projects single">
         <div class="card">
-          <h4>Customer Portal Revamp</h4>
-          <p>Re-architected the legacy Angular 12 loan-journey portal to Angular 20 with SSR, signals-based state, and full E2E coverage — delivered in 5 months.</p>
-          <span class="impact">↑ 4x loan-application leads</span>
-          <div class="tags"><span class="tag">Angular 20</span><span class="tag">SSR</span><span class="tag">NgRx Signals</span><span class="tag">Playwright</span></div>
-        </div>
-        <div class="card">
-          <h4>Mobile App Rebuild</h4>
-          <p>Rebuilt the customer app from scratch in React Native, replacing a legacy Android-only native app with a cross-platform codebase.</p>
-          <span class="impact">1M+ downloads · 4.6★ · 3x leads</span>
+          <h4>FlexiLoans — MSME Lending Platform</h4>
+          <p>One product, end to end: the customer web portal and mobile app for business loans, powered by a microservices backend — my team of 6 builds and ships all of it with AI.</p>
+          <span class="impact">4x loan applications · 1M+ downloads · 4.6★</span>
           <a class="applink" href="https://play.google.com/store/apps/details?id=com.flexiloan&amp;hl=en_IN" target="_blank" rel="noopener">▶ Play Store</a>
-          <div class="tags"><span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">React Query</span><span class="tag">Firebase</span></div>
-        </div>
-        <div class="card">
-          <h4>Backend Platform</h4>
-          <p>Designed a scalable NestJS + Nx monorepo powering the lending journey — 25+ microservices, async-first architecture, full observability.</p>
-          <span class="impact">20+ partner integrations</span>
-          <div class="tags"><span class="tag">NestJS</span><span class="tag">Nx</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Redis</span><span class="tag">AWS</span></div>
-        </div>
-        <div class="card">
-          <h4>AI Engineering Pipeline</h4>
-          <p>Built a multi-agent AI workflow taking Jira tickets through refinement, implementation, QA, and PR review — plus automated architecture and quality guards.</p>
-          <span class="impact">3-month backlog shipped in 1 month</span>
-          <div class="tags"><span class="tag">Claude Code</span><span class="tag">MCP</span><span class="tag">Agents</span><span class="tag">Cursor</span><span class="tag">Kiro</span></div>
-        </div>
-        <div class="card">
-          <h4>Lead Monetization Platform</h4>
-          <p>Turned surplus and rejected loan leads into a new revenue line via partner redirects and credit-card cross-sell with A/B experimentation.</p>
-          <span class="impact">↑ 1.5x revenue · new business line</span>
-          <div class="tags"><span class="tag">A/B Testing</span><span class="tag">Partner APIs</span></div>
-        </div>
-        <div class="card">
-          <h4>Multilingual Portal</h4>
-          <p>Shipped a multilingual loan journey for rural MSME borrowers across regional languages.</p>
-          <span class="impact">↑ 15% qualified leads</span>
-          <div class="tags"><span class="tag">i18n</span><span class="tag">Angular</span></div>
+          <a class="applink" href="https://flexiloans.com/" target="_blank" rel="noopener">🌐 Web Portal</a>
+          <ul class="worklist">
+            <li><b>Portal revamp</b> — legacy Angular 12 → Angular 20 with SSR and signals, shipped in 5 months → <em>4x loan-application leads</em></li>
+            <li><b>Mobile app rebuild</b> — React Native + Expo, replaced the legacy Android-only app → <em>1M+ downloads · 4.6★ · 3x leads</em></li>
+            <li><b>Backend platform</b> — NestJS + Nx monorepo, 25+ microservices, async-first → <em>20+ partner integrations</em></li>
+            <li><b>AI engineering pipeline</b> — multi-agent workflow from Jira ticket to reviewed PR → <em>3-month backlog shipped in 1 month</em></li>
+            <li><b>Lead monetization</b> — partner redirects + credit-card cross-sell with A/B testing → <em>1.5x revenue, new business line</em></li>
+            <li><b>Multilingual journeys</b> — regional-language loan flows for rural MSMEs → <em>+15% qualified leads</em></li>
+          </ul>
+          <div class="tags"><span class="tag">Angular 20</span><span class="tag">React Native</span><span class="tag">NestJS</span><span class="tag">Nx</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Redis</span><span class="tag">AWS</span><span class="tag">Claude Code</span><span class="tag">MCP</span></div>
         </div>
       </div>
     </div>
