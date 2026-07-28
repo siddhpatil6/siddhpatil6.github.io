@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddhant Patil — Engineering Lead · AI-Native Product Development</title>
+<meta name="description" content="Engineering Lead with 12+ years across web, mobile, and backend. AI-native engineering — 3x faster shipping, 4x lead growth, 1M+ app downloads.">
+<style>
+  :root {
+    --bg: #0b0f14;
+    --surface: #121820;
+    --surface-2: #1a2230;
+    --border: #243040;
+    --text: #e8edf4;
+    --muted: #9aa8bb;
+    --accent: #4fd1a5;
+    --accent-dim: rgba(79, 209, 165, 0.12);
+    --amber: #f2b544;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  header { padding: 88px 0 56px; border-bottom: 1px solid var(--border); }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent-dim); color: var(--accent);
+    border: 1px solid rgba(79, 209, 165, 0.3);
+    padding: 6px 14px; border-radius: 999px;
+    font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
+    margin-bottom: 24px;
+  }
+  .badge::before {
+    content: ""; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  h1 { font-size: clamp(36px, 6vw, 54px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+  .headline {
+    font-size: clamp(17px, 2.5vw, 21px); color: var(--accent);
+    font-weight: 600; margin-top: 12px;
+  }
+  .sub { color: var(--muted); margin-top: 16px; max-width: 640px; font-size: 16px; }
+  .loc { color: var(--muted); font-size: 14px; margin-top: 8px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .btn {
+    display: inline-block; padding: 11px 22px; border-radius: 8px;
+    font-size: 14px; font-weight: 600; text-decoration: none;
+    transition: transform 0.15s, opacity 0.15s;
+  }
+  .btn:hover { transform: translateY(-1px); opacity: 0.92; }
+  .btn-primary { background: var(--accent); color: #0b0f14; }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+  /* Metrics */
+  .metrics {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border); border-radius: 12px;
+    overflow: hidden; margin: 48px 0;
+  }
+  .metric { background: var(--surface); padding: 22px 16px; text-align: center; }
+  .metric b { display: block; font-size: 26px; font-weight: 800; color: var(--accent); }
+  .metric span { font-size: 13px; color: var(--muted); }
+
+  /* Sections */
+  section { padding: 48px 0; }
+  h2 {
+    font-size: 14px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.12em; color: var(--muted); margin-bottom: 28px;
+  }
+  h2 em { color: var(--accent); font-style: normal; }
+
+  /* Experience blocks */
+  .org { margin-bottom: 44px; }
+  .org-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+  .org-head h3 { font-size: 21px; font-weight: 700; }
+  .org-head .role { color: var(--accent); font-size: 14px; font-weight: 600; }
+  .org-head .dates { color: var(--muted); font-size: 13px; margin-left: auto; }
+  .org-sub { color: var(--muted); font-size: 14px; margin-bottom: 18px; }
+  .projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 18px 18px 16px;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: var(--accent); }
+  .card h4 { font-size: 15.5px; font-weight: 700; margin-bottom: 6px; }
+  .card p { font-size: 13.5px; color: var(--muted); }
+  .card .impact {
+    display: inline-block; margin-top: 10px; font-size: 12.5px; font-weight: 700;
+    color: var(--amber);
+  }
+  .tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    font-size: 11px; font-weight: 600; color: var(--muted);
+    background: var(--surface-2); border-radius: 4px; padding: 3px 8px;
+  }
+
+  /* Skills */
+  .skill-group { margin-bottom: 20px; }
+  .skill-group h4 { font-size: 14px; color: var(--text); margin-bottom: 10px; font-weight: 700; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 6px 14px; border-radius: 999px; font-size: 13px; color: var(--text);
+  }
+  .chip.hot { border-color: rgba(79, 209, 165, 0.4); color: var(--accent); }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--border); padding: 48px 0 64px; text-align: center;
+  }
+  footer h2 { margin-bottom: 12px; }
+  footer .big { font-size: clamp(22px, 4vw, 30px); font-weight: 800; margin-bottom: 20px; }
+  footer .links { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 8px; }
+  footer a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 15px; }
+  footer a:hover { text-decoration: underline; }
+  footer .fine { color: var(--muted); font-size: 12.5px; margin-top: 36px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="badge">Open to new opportunities</div>
+    <h1>Siddhant Patil</h1>
+    <div class="headline">Engineering Lead — AI-Native Product Development · Web, Mobile &amp; Backend</div>
+    <p class="sub">12+ years building and leading engineering teams. I ship products with AI end-to-end —
+    my team of 6 delivered a full platform revamp in 5 months, cleared a 3-month backlog in 1 month,
+    and ships 3x faster while holding a 4.6★ app rating.</p>
+    <div class="loc">📍 Mumbai, India</div>
+    <div class="cta">
+      <a class="btn btn-primary" href="mailto:siddhpatil6@gmail.com">Email me</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/siddhant-patil/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-ghost" href="tel:+918149842231">+91 81498 42231</a>
+      <a class="btn btn-ghost" href="Siddhant_Patil_Resume.pdf" download>Download Resume</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="metrics">
+    <div class="metric"><b>12+</b><span>years experience</span></div>
+    <div class="metric"><b>3x</b><span>faster shipping with AI</span></div>
+    <div class="metric"><b>4x</b><span>loan-application growth</span></div>
+    <div class="metric"><b>1M+</b><span>app downloads · 4.6★</span></div>
+    <div class="metric"><b>25+</b><span>microservices designed</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section id="work">
+    <h2>Projects &amp; <em>Experience</em></h2>
+
+    <div class="org">
+      <div class="org-head">
+        <h3>FlexiLoans</h3>
+        <span class="role">Engineering Lead — Customer Journey</span>
+        <span class="dates">Apr 2025 – Present</span>
+      </div>
+      <div class="org-sub">Fintech · MSME lending · Leading a cross-functional team of 6 (web, mobile, backend)</div>
+      <div class="projects">
+        <div class="card">
+          <h4>Customer Portal Revamp</h4>
+          <p>Re-architected the legacy Angular 12 loan-journey portal to Angular 20 with SSR, signals-based state, and full E2E coverage — delivered in 5 months.</p>
+          <span class="impact">↑ 4x loan-application leads</span>
+          <div class="tags"><span class="tag">Angular 20</span><span class="tag">SSR</span><span class="tag">NgRx Signals</span><span class="tag">Playwright</span></div>
+        </div>
+        <div class="card">
+          <h4>Mobile App Rebuild</h4>
+          <p>Rebuilt the customer app from scratch in React Native, replacing a legacy Android-only native app with a cross-platform codebase.</p>
+          <span class="impact">1M+ downloads · 4.6★ · 3x leads</span>
+          <div class="tags"><span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">React Query</span><span class="tag">Firebase</span></div>
+        </div>
+        <div class="card">
+          <h4>Backend Platform</h4>
+          <p>Designed a scalable NestJS + Nx monorepo powering the lending journey — 25+ microservices, async-first architecture, full observability.</p>
+          <span class="impact">20+ partner integrations</span>
+          <div class="tags"><span class="tag">NestJS</span><span class="tag">Nx</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Redis</span><span class="tag">AWS</span></div>
+        </div>
+        <div class="card">
+          <h4>AI Engineering Pipeline</h4>
+          <p>Built a multi-agent AI workflow taking Jira tickets through refinement, implementation, QA, and PR review — plus automated architecture and quality guards.</p>
+          <span class="impact">3-month backlog shipped in 1 month</span>
+          <div class="tags"><span class="tag">Claude Code</span><span class="tag">MCP</span><span class="tag">Agents</span><span class="tag">Cursor</span><span class="tag">Kiro</span></div>
+        </div>
+        <div class="card">
+          <h4>Lead Monetization Platform</h4>
+          <p>Turned surplus and rejected loan leads into a new revenue line via partner redirects and credit-card cross-sell with A/B experimentation.</p>
+          <span class="impact">↑ 1.5x revenue · new business line</span>
+          <div class="tags"><span class="tag">A/B Testing</span><span class="tag">Partner APIs</span></div>
+        </div>
+        <div class="card">
+          <h4>Multilingual Portal</h4>
+          <p>Shipped a multilingual loan journey for rural MSME borrowers across regional languages.</p>
+          <span class="impact">↑ 15% qualified leads</span>
+          <div class="tags"><span class="tag">i18n</span><span class="tag">Angular</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="org">
+      <div class="org-head">
+        <h3>Unico Connect</h3>
+        <span class="role">Technical Lead — Mobile</span>
+        <span class="dates">Jun 2024 – Mar 2025</span>
+      </div>
+      <div class="org-sub">Led 10 mobile developers · 2 apps shipped from scratch in 8 months</div>
+      <div class="projects">
+        <div class="card">
+          <h4>DigiPravesh</h4>
+          <p>Appointment-booking app for the Government of Maharashtra (Mantralaya) — built and launched from scratch.</p>
+          <div class="tags"><span class="tag">Flutter</span><span class="tag">GovTech</span></div>
+        </div>
+        <div class="card">
+          <h4>Brain App</h4>
+          <p>EdTech platform for Highlands Community Charter (US) — full mobile build with AI-assisted development practices.</p>
+          <div class="tags"><span class="tag">Flutter</span><span class="tag">EdTech</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="org">
+      <div class="org-head">
+        <h3>Angel Broking (Angel One)</h3>
+        <span class="role">Senior Manager — Mobile</span>
+        <span class="dates">2020 – 2024</span>
+      </div>
+      <div class="org-sub">India's leading retail stockbroking platform</div>
+      <div class="projects">
+        <div class="card">
+          <h4>Angel One Trading App</h4>
+          <p>Core contributor and mobile lead on one of India's largest trading apps.</p>
+          <span class="impact">100M+ downloads · 4.4★</span>
+          <div class="tags"><span class="tag">Android</span><span class="tag">Kotlin</span><span class="tag">iOS</span><span class="tag">Fintech</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="org">
+      <div class="org-head">
+        <h3>Greenlight Planet (Sun King)</h3>
+        <span class="role">Backend Engineer</span>
+      </div>
+      <div class="org-sub">Pay-as-you-go solar energy financing</div>
+      <div class="projects">
+        <div class="card">
+          <h4>PAYG Financing Backend</h4>
+          <p>Python backend systems for pay-as-you-go solar financing serving off-grid customers.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">Fintech</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-group">
+      <h4>AI-Assisted Engineering</h4>
+      <div class="chips">
+        <span class="chip hot">Claude Code</span><span class="chip hot">Multi-Agent Workflows</span>
+        <span class="chip hot">MCP</span><span class="chip hot">Cursor</span><span class="chip hot">Kiro</span>
+        <span class="chip hot">AI Code Review</span><span class="chip hot">AI-Driven QA</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h4>Frontend &amp; Mobile</h4>
+      <div class="chips">
+        <span class="chip">Angular</span><span class="chip">React Native</span><span class="chip">Flutter</span>
+        <span class="chip">Android (Kotlin/Java)</span><span class="chip">iOS (Swift)</span><span class="chip">TypeScript</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h4>Backend &amp; Infra</h4>
+      <div class="chips">
+        <span class="chip">Node.js / NestJS</span><span class="chip">Nx Monorepo</span><span class="chip">Python / Django</span>
+        <span class="chip">MySQL</span><span class="chip">MongoDB</span><span class="chip">Redis</span>
+        <span class="chip">AWS</span><span class="chip">Docker</span><span class="chip">Datadog</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h4>Leadership</h4>
+      <div class="chips">
+        <span class="chip">Team Leadership (6–10 devs)</span><span class="chip">Architecture</span>
+        <span class="chip">Sprint Planning</span><span class="chip">Mentoring</span><span class="chip">Hiring</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <div class="big">Let's build something fast — and build it right.</div>
+    <div class="links">
+      <a href="mailto:siddhpatil6@gmail.com">siddhpatil6@gmail.com</a>
+      <a href="tel:+918149842231">+91 81498 42231</a>
+      <a href="https://www.linkedin.com/in/siddhant-patil/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/siddhpatil6" target="_blank" rel="noopener">GitHub</a>
+      <a href="Siddhant_Patil_Resume.pdf" download>Resume (PDF)</a>
+    </div>
+    <div class="fine">© 2026 Siddhant Patil · Mumbai, India</div>
+  </div>
+</footer>
+
+</body>
+</html>
